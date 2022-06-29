@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../../vue-material-reservierung-julieedjamii/src/views/HomeView.vue'
 
 const routes = [
   {
@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/reservations',
     name: 'reservations',
-    component: () => import( '../views/ReservationsView.vue')
+    component: () => import( '../../vue-material-reservierung-julieedjamii/src/views/ReservationsView.vue')
   },
   {
     path: '/about',
@@ -18,12 +18,12 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../../vue-material-reservierung-julieedjamii/src/views/AboutView.vue')
   },
   {
     path: '/Ferienreservation',
     name: 'Ferienreservation',
-    component: () => import( '../views/FerienReservationView.vue')
+    component: () => import( '../../vue-material-reservierung-julieedjamii/src/views/FerienReservationView.vue')
   },
 ]
 
