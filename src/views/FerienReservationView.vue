@@ -39,10 +39,10 @@ export default {
   methods: {
     async doReserve() {
       const payload = {
-        StudentID: 4,
+        StudentID: store.lernpartner_id,
         VacationTypeID: 1,
         FromDate: "2022-07-03 10:21:37",
-        ToDate: "2022-07-07 10:21:37",
+        toDate: "2022-07-07 10:21:37",
       };
       console.log(payload);
       const response = await fetch('https://projects.sbw.media/vacation', {

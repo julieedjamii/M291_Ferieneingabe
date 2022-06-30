@@ -1,12 +1,24 @@
+<style lang="sass" scoped>
+table
+  border-collapse: collapse
+  margin: 0 auto
+  td
+    text-align: left
+    table 
+    border: 1px solid
+    
+</style>
+
 <template>
 <div>
   <div v-if="isEmpty">
   <p>Keine Rservierungen vorhanden</p>
   </div>
-  <table v-else>
+  <table class="table">
     <thead>
       <tr>
         <th>Lernpartner</th>
+        <br>
         <th>Von</th>
         <th>Bis</th>
         <br>
@@ -16,8 +28,8 @@
       <tr v-for="vacation in vacations" :key="vacation.ID" :data-id="vacation.ID">
         <td>{{ vacation.Fullname }}</td>
         <td>{{ vacation.VacationType }}</td>
-        <td>{{ vacation.FromeDate }}</td>
-        <td>{{ vacation.ToDate }}</td>
+        <td>{{ vacation.FromDate }}</td>
+        <td>{{ vacation.toDate }}</td>
       </tr>
       
     </tbody>
@@ -65,10 +77,3 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-table
-  border-collapse: collapse
-  margin: 0 auto
-  td
-    text-align: left
-</style>
