@@ -13,10 +13,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="reservation in reservations" :key="reservation.ID" :data-id="reservation.ID">
-        <td>{{ reservation.Fullname }}</td>
-        <td>{{ reservation.Start }}</td>
-        <td>{{ reservation.End }}</td>
+      <tr v-for="vacation in vacations" :key="vacation.ID" :data-id="vacation.ID">
+        <td>{{ vacation.Fullname }}</td>
+        <td>{{ vacation.VacationType }}</td>
+        <td>{{ vacation.FromeDate }}</td>
+        <td>{{ vacation.ToDate }}</td>
       </tr>
       
     </tbody>
@@ -30,34 +31,34 @@
 import { store } from '@/store';
 
 export default {
-  name: 'ReservationsView',
+  name: 'VacationList',
   data() {
     return {
-      reservations: [],
+      vacations: [],
       store
     };
   },
   created() {
-  this.getReservations();
+  this.getvacations();
   },
   computed: {
     isEmpty() {
-      return this.reservations.length == 0;
+      return this.vacations.length == 0;
     },
   },
   methods: {
-    async getReservations() {
+    async getvacations() {
       let url;
-      if(store.lernpartner_id !== 0) {
-        url = "https://projects.sbw.media/reservationview?StudentID=" + store.lernpartner_id;
+      if(store.lernpartner_id !== "0") {
+        url = "https://projects.sbw.media/vacationview?StudentID=" + store.lernpartner_id;
       } else {
-        url = "https://projects.sbw.media/reservationview";
+        url = "https://projects.sbw.media/vacationview";
       }
       const response = await fetch(url);
       if(response.ok) {
-        this.reservations = await response.json();
+        this.vacations = await response.json();
       } else {
-        this.reservations = [];
+        this.vacations = [];
       }
     },
   }

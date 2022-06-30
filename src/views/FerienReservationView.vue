@@ -39,13 +39,13 @@ export default {
   methods: {
     async doReserve() {
       const payload = {
-        StudentID: store.lernpartner_id,
-        EquipmentID: store.equipment_id,
-        Start: this.fromDate,
-        End: this.toDate,
+        StudentID: 4,
+        VacationTypeID: 1,
+        FromDate: "2022-07-03 10:21:37",
+        ToDate: "2022-07-07 10:21:37",
       };
       console.log(payload);
-      const response = await fetch('https://projects.sbw.media/equipment_reservation', {
+      const response = await fetch('https://projects.sbw.media/vacation', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

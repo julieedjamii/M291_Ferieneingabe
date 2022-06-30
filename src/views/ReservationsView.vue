@@ -1,22 +1,21 @@
 <template>
   <div class="home">
-    <reservation-list></reservation-list>
+    <Vacation-list></Vacation-list>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ReservationList from '@/components/ReservationList.vue';
+import VacationList from '@/components/VacationList.vue';
 
 export default {
-  name: 'ReservationsView',
+  name: 'VacationsView',
   data() {
     return {
-      reservations: [],
     };
   },
   components: {
-    ReservationList
+    VacationList
   },
   methods: {
   },
