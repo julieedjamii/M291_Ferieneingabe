@@ -14,3 +14,9 @@ Es hat ebenfalls funktioniert.
 <img width="456" alt="image" src="https://user-images.githubusercontent.com/97664345/176649950-b7aede7f-773d-4d31-9022-52736b4f5fe6.png">
 
 
+
+#Fazit
+
+Bei diesem Projekt hatte ich Mühe und war auch zum Teil auch verwirrt, trotzdem habe ich versucht mein Bestes zu geben. Ich habe sehr viel Unterstützung gebraucht und habe viele Fragen gestellt. Mein Projekt habe ich zum Glück Fehler Frei abgeschlossen.
+
+
